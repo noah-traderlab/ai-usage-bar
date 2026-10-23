@@ -1,4 +1,4 @@
-# AI Usage Bar (Windows) のビルド。Windows標準の .NET Framework 4.8 コンパイラだけを使う。
+﻿# AI Usage Bar (Windows) のビルド。Windows標準の .NET Framework 4.8 コンパイラだけを使う。
 #   .\build.ps1             tests.exe・AIUsageBar.exe・セットアップをビルド
 #   .\build.ps1 -TestsOnly  tests.exe だけ
 #   .\build.ps1 -SetupOnly  セットアップだけ（AIUsageBar.exe は作り直さない。仕様書に exe のハッシュを書いた後に使う）
