@@ -1,0 +1,28 @@
+name: Source checks
+on: [push, pull_request]
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest test_secure_writes -v
+        working-directory: mac
+      - run: python selftest.py
+        working-directory: mac
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: ./build.ps1
+        shell: powershell
+      - run: ./build/tests.exe --unit
+        shell: powershell
+      - run: ./build/tests.exe --team
+        shell: powershell
+      - run: python mac/crosstest.py
