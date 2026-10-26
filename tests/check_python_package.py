@@ -28,9 +28,10 @@ with tempfile.TemporaryDirectory(prefix="aiusagebar-wheel-") as folder:
     python = scripts / ("python.exe" if sys.platform == "win32" else "python")
     cli = scripts / ("aiusagebar.exe" if sys.platform == "win32" else "aiusagebar")
     subprocess.run([str(python), "-m", "pip", "install", "--no-index", "--no-deps", str(wheel)], check=True, cwd=folder)
-    for command in ([str(cli), "--help"], [str(python), "-I", "-m", "aiusagebar", "--help"]):
+    for command in ([str(cli), "--help"], [str(python), "-I", "-X", "utf8", "-m", "aiusagebar", "--help"]):
         result = subprocess.run(command, check=True, cwd=folder, capture_output=True, timeout=30)
         assert b"join" in result.stdout and b"status" in result.stdout
-    result = subprocess.run([str(python), "-I", "-c", "import aiusagebar; print(aiusagebar.__version__)"], check=True, cwd=folder, capture_output=True, timeout=30)
+    result = subprocess.run([str(python), "-I", "-X", "utf8", "-c", "import aiusagebar; print(aiusagebar.__version__)"], check=True, cwd=folder, capture_output=True, timeout=30)
     assert result.stdout.strip() == b"0.1.0"
 print("Wheel contents, licenses, offline install, console/module help and version passed")
+
