@@ -11,3 +11,7 @@ There is no paid bug-bounty program or guaranteed response deadline. Publication
 ## Supported versions
 
 This is an early-stage project. Maintenance currently targets the latest source revision. Binary distributions and older versions must be checked separately against the source revision they contain.
+
+## Security maintenance contact
+
+The named security maintenance contact is [@noah-traderlab](https://github.com/noah-traderlab). See [security maintenance and attribution](docs/security-maintenance.md) for scope and evidence. This designation does not establish external use or eligibility for a verification program.
