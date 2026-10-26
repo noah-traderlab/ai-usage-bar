@@ -11,3 +11,8 @@ __pycache__/
 *.tmp-*
 .DS_Store
 Thumbs.db
+
+# Python distributions
+dist/
+*.egg-info/
+.venv/

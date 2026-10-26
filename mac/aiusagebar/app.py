@@ -311,3 +311,8 @@ def start_background_reporter(svc, on_status=None):
     th = threading.Thread(target=loop, daemon=True)
     th.start()
     return stop
+
+
+def main():
+    """Installed console entry point; preserve the existing CLI behavior."""
+    return cli(sys.argv[1:])
