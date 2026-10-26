@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-usage-bar-mac"
+version = "0.1.0"
+description = "macOS team companion for AI Usage Bar"
+readme = "README.pypi.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "noah-traderlab"}]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/noah-traderlab/ai-usage-bar"
+Source = "https://github.com/noah-traderlab/ai-usage-bar"
+Issues = "https://github.com/noah-traderlab/ai-usage-bar/issues"
+Security = "https://github.com/noah-traderlab/ai-usage-bar/security/policy"
+
+[project.scripts]
+aiusagebar = "aiusagebar.app:main"
+
+[tool.setuptools.packages.find]
+where = ["mac"]
+include = ["aiusagebar", "aiusagebar.*"]
