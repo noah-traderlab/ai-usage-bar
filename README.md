@@ -38,6 +38,8 @@ ClaudeやCodexなどの名称は対応先を示すものです。本ツールは
 
 [MIT License](LICENSE)。コード・文章の作成者による公開とMIT適用の承認に基づき公開しています。第三者のランタイムや商標を再許諾するものではありません。
 
-## Pythonパッケージの配布準備
+## MacアプリとPythonパッケージ
 
-Mac用ツールをwheel/sdistとしてビルドできるようにしました。PyPIへの公開・パッケージ名の確保はまだ行っていません。ビルド、インストール検査、公開手順と採用統計の扱いは [配布手順](docs/python-package-release.md) を参照してください。
+Mac用ツールのPython同梱アプリ・DMGをApple Silicon / Intel別にビルドします。[インストールと検証範囲](docs/macos-app.md)を参照してください。現段階はアドホック署名の開発用ビルドで、Developer ID署名・Apple公証は未実施です。
+
+[PyPI版0.1.0](https://pypi.org/project/ai-usage-bar-mac/0.1.0/)も公開済みで、引き続き利用できます。ビルド、インストール検査、公開手順と採用統計の扱いは [配布手順](docs/python-package-release.md) を参照してください。
