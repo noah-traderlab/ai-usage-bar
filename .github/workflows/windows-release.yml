@@ -1,0 +1,28 @@
+name: Windows distribution
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  distribution:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: ./build.ps1
+        shell: powershell
+      - run: ./build/tests.exe --unit
+        shell: powershell
+      - run: ./build/tests.exe --team
+        shell: powershell
+      - run: python mac/crosstest.py
+      - run: ./installer/test-setup.ps1
+        shell: powershell
+      - run: ./installer/package-windows.ps1
+        shell: pwsh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-distribution
+          path: dist/windows/*
+          if-no-files-found: error
