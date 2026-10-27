@@ -12,6 +12,8 @@ Claude CodeとCodexの利用状況を表示するWindowsアプリと、Mac用の
 
 Windows版は `build.ps1` と同梱の「はじめに」を参照してください。Mac版は `mac/はじめに（Mac）.txt` を参照してください。
 
+Windows専用の配布ZIPは[Windows 0.1.0リリース](https://github.com/noah-traderlab/ai-usage-bar/releases/tag/windows-v0.1.0)から入手できます。[インストール案内](docs/windows-install.md)と署名の制限を確認してください。公開ソースから再ビルドした配布物で、旧ZIPの画像・Macソースは含みません。
+
 ## セキュリティ修正の検証
 
 ```sh
