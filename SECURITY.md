@@ -15,3 +15,5 @@ This is an early-stage project. Maintenance currently targets the latest source 
 ## Security maintenance contact
 
 The named security maintenance contact is [@noah-traderlab](https://github.com/noah-traderlab). See [security maintenance and attribution](docs/security-maintenance.md) for scope and evidence. This designation does not establish external use or eligibility for a verification program.
+
+The [public evidence index](docs/security-evidence.md) links maintenance records, release source revisions and verification results, with their limitations.
