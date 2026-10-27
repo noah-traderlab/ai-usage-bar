@@ -2,6 +2,9 @@ name: Windows distribution
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
+env:
+  PYTHONUTF8: '1'
+  PYTHONIOENCODING: utf-8
 jobs:
   distribution:
     runs-on: windows-latest
