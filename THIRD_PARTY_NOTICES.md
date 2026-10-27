@@ -9,3 +9,7 @@ The original `assets/AppIcon.ico` and its conversion script were omitted from th
 Claude, Codex, Windows, macOS, and other product names identify integrations or supported environments. This is an independent tool; no endorsement or affiliation is claimed. This source snapshot does not grant rights to third-party names or trademarks.
 
 Review date: 2026-10-23. This file is a provenance record, not a certification that all rights have been cleared.
+
+## Standalone macOS build (2026-10-27)
+
+Unlike the source/PyPI distribution, the standalone application bundles CPython and Tcl/Tk with PyInstaller. These components retain their upstream licenses; the CPython license is included under the application's licenses directory and PyInstaller collects Tcl/Tk resources. PyInstaller's bootloader is distributed under its GPL license with the exception permitting bundled application distribution; see https://pyinstaller.org/en/stable/license.html . The application source remains MIT. No Apple Developer ID signature or notarization is implied by an ad-hoc signature.

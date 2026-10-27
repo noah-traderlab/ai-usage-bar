@@ -5,6 +5,7 @@ import platform
 import shutil
 import subprocess
 import sys
+import sysconfig
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -21,6 +22,12 @@ def main():
         raise SystemExit(f"Unsupported architecture: {arch}")
     out = ROOT / "dist" / f"macos-{arch}"
     out.mkdir(parents=True, exist_ok=True)
+    # CPython's license includes notices for its bundled components.
+    license_candidates = [pathlib.Path(sysconfig.get_path("stdlib")) / "LICENSE.txt",
+                          pathlib.Path(sys.base_prefix) / "LICENSE.txt"]
+    python_license = next((p for p in license_candidates if p.is_file()), None)
+    if python_license is None:
+        raise SystemExit("CPython license file not found; do not distribute.")
     run(sys.executable, "-m", "PyInstaller", "--noconfirm", "--clean",
         "--windowed", "--onedir", "--name", "AI Usage Bar",
         "--osx-bundle-identifier", "io.github.noah-traderlab.ai-usage-bar",
@@ -28,6 +35,7 @@ def main():
         "--workpath", ROOT / "build" / arch, "--specpath", ROOT / "build",
         "--add-data", f"{ROOT / 'LICENSE'}:licenses",
         "--add-data", f"{ROOT / 'THIRD_PARTY_NOTICES.md'}:licenses",
+        "--add-data", f"{python_license}:licenses/CPython",
         ROOT / "mac" / "desktop_entry.py")
     app = out / "AI Usage Bar.app"
     run("codesign", "--verify", "--deep", "--strict", app)
