@@ -1,3 +1,30 @@
+# AI Usage Bar — public source archive
+
+This repository preserves previously published MIT-licensed AI Usage Bar source and release provenance. Active development was consolidated into the private `ai-usage-bar/` directory of [noah-traderlab/ai-project](https://github.com/noah-traderlab/ai-project) on 2026-11-03. That repository requires access; this archive does not grant access to it or contain subsequent private changes.
+
+On 2026-11-05, the maintainer restored this previously public repository to make existing fixed source and maintenance links readable again. This is an archive for inspection, not a second development location. The restored historical source ends at [`610d9fff`](https://github.com/noah-traderlab/ai-usage-bar/tree/610d9fff7fd14eb02bc6325e5b85c6dcbffdb0ec). The only additions for archival presentation are this notice and the separately dated verification workflow/results.
+
+## Source and maintenance evidence
+
+- Named maintainer: [水野拓真 / @noah-traderlab](https://github.com/noah-traderlab). The public profile association is not independent identity verification.
+- [Submitted maintenance index at its original revision](https://github.com/noah-traderlab/ai-usage-bar/blob/02f534140308e9408e1211c8cc9489621cabe549/docs/security-evidence.md) and [responsibilities with AI-assisted attribution](https://github.com/noah-traderlab/ai-usage-bar/blob/02f534140308e9408e1211c8cc9489621cabe549/docs/security-maintenance.md).
+- [Fixed implementation](https://github.com/noah-traderlab/ai-usage-bar/blob/02f534140308e9408e1211c8cc9489621cabe549/mac/aiusagebar/team.py), [synthetic regression tests](https://github.com/noah-traderlab/ai-usage-bar/blob/02f534140308e9408e1211c8cc9489621cabe549/mac/test_secure_writes.py), and [contemporaneous explanation and limits](https://github.com/noah-traderlab/ai-usage-bar/blob/02f534140308e9408e1211c8cc9489621cabe549/docs/security-fix-2026-10-23.md). The correction was included in the initial public commit; this public history does not contain a pre-fix revision.
+- [MIT license](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
+- [Windows 0.1.0 release](https://github.com/noah-traderlab/ai-usage-bar/releases/tag/windows-v0.1.0) uses [source 1148ae8](https://github.com/noah-traderlab/ai-usage-bar/tree/1148ae8f7ba302f3981a62798b5b58476ce3c63a). It is not Authenticode signed.
+- [macOS Python companion 0.1.0 on PyPI](https://pypi.org/project/ai-usage-bar-mac/0.1.0/) retains its source distribution and publishing attestations. No package was republished for this archive.
+
+Historical documents describe the status at their dates. The historical Actions runs checked during restoration were unavailable; those runs are not presented as newly verified here. Any new verification below is a distinct, dated run against the unchanged historical source. The standalone macOS app has not been published as a signed/notarized release.
+
+This archive is not an active vulnerability-reporting channel. Historical references to private reporting describe the earlier repository configuration. Do not post credentials, private logs, personal information, or vulnerability details publicly; the [security policy](SECURITY.md) provides the fallback when a private channel is unavailable.
+
+Availability, tests, and maintainer-authored documentation do not establish third-party adoption, a CVE, independent disclosure acceptance, or eligibility for an external program. Restoration and documentation were prepared with AI assistance at the maintainer's direction.
+
+---
+
+## Historical README (preserved below)
+
+The following text describes the former development repository. Its present-tense maintenance and CI statements must be read with the archive notice above.
+
 # AI Usage Bar
 
 Claude CodeとCodexの利用状況を表示するWindowsアプリと、Mac用のチーム参加・報告ツールです。
