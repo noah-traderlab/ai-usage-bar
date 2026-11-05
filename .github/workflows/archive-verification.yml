@@ -1,0 +1,44 @@
+name: Historical source verification (2026-11-05)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONUTF8: '1'
+  PYTHONIOENCODING: utf-8
+jobs:
+  python:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          ref: 610d9fff7fd14eb02bc6325e5b85c6dcbffdb0ec
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.12'
+      - run: python -m unittest test_secure_writes -v
+        working-directory: mac
+      - run: python selftest.py
+        working-directory: mac
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          ref: 610d9fff7fd14eb02bc6325e5b85c6dcbffdb0ec
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.12'
+      - run: ./build.ps1
+        shell: powershell
+      - run: ./build/tests.exe --unit
+        shell: powershell
+      - run: ./build/tests.exe --team
+        shell: powershell
+      - run: python mac/crosstest.py
