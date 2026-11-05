@@ -17,7 +17,7 @@ Historical documents describe the status at their dates. The historical Actions 
 
 ## Verification performed on 2026-11-05
 
-[Historical source verification run 42003193783](https://github.com/noah-traderlab/ai-usage-bar/actions/runs/42003193783) completed successfully on all three operating systems. The workflow definition is commit `58fdd0e02c9325fec9689e65f39976b87058b98b`; each job explicitly checked out the historical source `610d9fff7fd14eb02bc6325e5b85c6dcbffdb0ec`.
+[Historical source verification run 42003193783 (public GitHub API status)](https://api.github.com/repos/noah-traderlab/ai-usage-bar/actions/runs/42003193783) completed successfully on all three operating systems. The workflow definition is commit `58fdd0e02c9325fec9689e65f39976b87058b98b`; each job explicitly checked out the historical source `610d9fff7fd14eb02bc6325e5b85c6dcbffdb0ec`.
 
 | Environment | Checks observed in this run |
 | --- | --- |
@@ -25,7 +25,7 @@ Historical documents describe the status at their dates. The historical Actions 
 | macOS | 3 state-file regression tests and 36 selftest checks; zero reported failures |
 | Linux | 3 state-file regression tests and 36 selftest checks; zero reported failures |
 
-This was one new manual verification run, not restoration of the missing historical CI logs. It did not publish a package or release, exercise end-user GUI operation, or independently audit security. Japanese labels in the Windows log are partly garbled; the numeric pass/fail totals and job exit results remain readable.
+The public GitHub API status above is accessible without login; the run HTML page is unavailable for this archive. This was one new manual verification run, not restoration of the missing historical CI logs. It did not publish a package or release, exercise end-user GUI operation, or independently audit security. Japanese labels in the Windows log are partly garbled; the numeric pass/fail totals and job exit results remain readable.
 
 This archive is not an active vulnerability-reporting channel. Historical references to private reporting describe the earlier repository configuration. Do not post credentials, private logs, personal information, or vulnerability details publicly; the [security policy](SECURITY.md) provides the fallback when a private channel is unavailable.
 
