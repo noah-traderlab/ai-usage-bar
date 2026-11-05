@@ -15,6 +15,18 @@ On 2026-11-05, the maintainer restored this previously public repository to make
 
 Historical documents describe the status at their dates. The historical Actions runs checked during restoration were unavailable; those runs are not presented as newly verified here. Any new verification below is a distinct, dated run against the unchanged historical source. The standalone macOS app has not been published as a signed/notarized release.
 
+## Verification performed on 2026-11-05
+
+[Historical source verification run 42003193783](https://github.com/noah-traderlab/ai-usage-bar/actions/runs/42003193783) completed successfully on all three operating systems. The workflow definition is commit `58fdd0e02c9325fec9689e65f39976b87058b98b`; each job explicitly checked out the historical source `610d9fff7fd14eb02bc6325e5b85c6dcbffdb0ec`.
+
+| Environment | Checks observed in this run |
+| --- | --- |
+| Windows | Build, 305 unit checks, 147 team checks, 30 C#/Python interoperability checks; zero reported failures |
+| macOS | 3 state-file regression tests and 36 selftest checks; zero reported failures |
+| Linux | 3 state-file regression tests and 36 selftest checks; zero reported failures |
+
+This was one new manual verification run, not restoration of the missing historical CI logs. It did not publish a package or release, exercise end-user GUI operation, or independently audit security. Japanese labels in the Windows log are partly garbled; the numeric pass/fail totals and job exit results remain readable.
+
 This archive is not an active vulnerability-reporting channel. Historical references to private reporting describe the earlier repository configuration. Do not post credentials, private logs, personal information, or vulnerability details publicly; the [security policy](SECURITY.md) provides the fallback when a private channel is unavailable.
 
 Availability, tests, and maintainer-authored documentation do not establish third-party adoption, a CVE, independent disclosure acceptance, or eligibility for an external program. Restoration and documentation were prepared with AI assistance at the maintainer's direction.
