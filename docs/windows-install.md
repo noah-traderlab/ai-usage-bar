@@ -1,5 +1,7 @@
 # AI Usage Bar Windows 0.1.0
 
+> 2026-11-08追記：[使用感を送る（匿名・ログイン不要・任意）](https://docs.google.com/forms/d/e/1FAIpQLScucMa18bwOd0HByQKaym4i5IFk9-P_EEkQg2sbT11G-9GJpg/viewform)。短い感想・困った点・不明点を歓迎します。未使用でも構いません。回答は一般公開せず、製品改善のため保管します。 配布ZIPと以下の履歴説明は変更していません。匿名性の限界と訂正・削除依頼はフォームをご確認ください。脆弱性は[現行の非公開受付](https://github.com/noah-traderlab/ai-usage-bar-support/security/advisories/new)へ送ってください（GitHubログインが必要）。
+
 ZIPを展開し、AI-Usage-Bar-Setup-0.1.0.exeを起動します。Windowsの.NET Framework 4.8を前提に公開ソースからビルドしています。Windowsの管理者向け画面とチーム参加・報告機能を含みます。Mac用アプリは別配布です。
 
 インストーラーは現在のユーザーのLocalAppData配下へインストールし、スタートメニューとアンインストール項目を登録します。管理者権限は不要です。自動起動・共有内容を確認して選択してください。

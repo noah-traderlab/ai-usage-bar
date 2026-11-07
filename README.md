@@ -2,7 +2,15 @@
 
 This repository preserves previously published MIT-licensed AI Usage Bar source and release provenance. Active development was consolidated into the private `ai-usage-bar/` directory of [noah-traderlab/ai-project](https://github.com/noah-traderlab/ai-project) on 2026-11-03. That repository requires access; this archive does not grant access to it or contain subsequent private changes.
 
-On 2026-11-05, the maintainer restored this previously public repository to make existing fixed source and maintenance links readable again. This is an archive for inspection, not a second development location. The restored historical source ends at [`610d9fff`](https://github.com/noah-traderlab/ai-usage-bar/tree/610d9fff7fd14eb02bc6325e5b85c6dcbffdb0ec). The only additions for archival presentation are this notice and the separately dated verification workflow/results.
+On 2026-11-05, the maintainer restored this previously public repository to make existing fixed source and maintenance links readable again. This is an archive for inspection, not a second development location. The restored historical source ends at [`610d9fff`](https://github.com/noah-traderlab/ai-usage-bar/tree/610d9fff7fd14eb02bc6325e5b85c6dcbffdb0ec). Archival presentation adds this notice, the separately dated verification workflow/results, and the current feedback notice dated below; historical source and fixed revisions remain unchanged.
+
+## Current feedback channel — added 2026-11-08
+
+[Share feedback — optional, no sign-in or name required](https://docs.google.com/forms/d/e/1FAIpQLScucMa18bwOd0HByQKaym4i5IFk9-P_EEkQg2sbT11G-9GJpg/viewform). Short comments, difficulties, and questions are welcome, including from people who have not used the product. Responses are kept non-public for product improvement.
+
+[使用感を送る（匿名・ログイン不要・任意）](https://docs.google.com/forms/d/e/1FAIpQLScucMa18bwOd0HByQKaym4i5IFk9-P_EEkQg2sbT11G-9GJpg/viewform)。短い感想・困った点・不明点を歓迎します。未使用でも構いません。回答は一般公開せず、製品改善のため保管します。
+
+This dated notice does not update any archived executable or historical verification result. No feedback is required to download or use the tool. For ordinary support and private security reporting, see the [current support repository](https://github.com/noah-traderlab/ai-usage-bar-support). Do not submit vulnerability details through the feedback form. Privacy and correction/deletion information is in the form.
 
 ## Source and maintenance evidence
 
